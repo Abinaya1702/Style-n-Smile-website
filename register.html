@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+<title>Register Form Design</title>
+    <link rel="stylesheet" type="text/css" href="loginstyle.css">
+
+<script>
+
+
+function vfun(){
+    var uname=document.forms["myform"]["uname"].value;
+    var upswd=document.forms["myform"]["upswd"].value;
+
+    if(uname==null||uname==""){
+        document.getElementById("errorBox").innerHTML="Enter the user name";
+        return false;
+
+    }
+
+    if(upswd==null || upswd ==""){
+        document.getElementById("errorBox").innerHTML="enter the password";
+        return false;
+    }
+    if(uname!=null && upswd!=null){
+   a     alert("Login Successful")
+    }
+}
+
+function vfun1(){
+    var uname1=document.forms["myform2"]["uname1"].value;
+    var upswd1=document.forms["myform2"]["upswd1"].value;
+    var email=document.forms["myform2"]["email"].value;
+    var upswd2=document.forms["myform2"]["upswd2"].value;
+
+    if(uname1==null||uname1==""){
+        document.getElementById("errorBox").innerHTML="Enter the user name";
+        return false;
+
+    }
+
+    if(upswd1==null || upswd1 ==""){
+        document.getElementById("errorBox").innerHTML="enter the password";
+        return false;
+    }
+    if(upswd2==null || upswd2 ==""){
+        document.getElementById("errorBox").innerHTML="confirm the password";
+        return false;
+    }
+    if(email==null || email ==""){
+        document.getElementById("errorBox").innerHTML="enter the password";
+        return false;
+    }
+
+    if(upswd1 !== upswd2){
+        alert("Password does not match");
+        return false;
+    }
+
+    if(uname1 !='' && upswd1 !='' && upswd2 !='' && upswd2!=''){
+        alert("registeration successful")
+    }
+
+
+}
+
+
+</script>
+
+
+</head>
+<body>
+       <header>
+    <div class="box">
+    <img src="user.png" class="user">
+
+        <h1>Register Here</h1>
+
+        <form name="myform2" action="registerinsert.php" method="POST">
+
+            <p>Username</p>
+            <input type="text" name="uname1" placeholder="Enter Username" required="">
+
+            <p>Email</p>
+            <input type="Email" name="email" placeholder="Enter email id" required="">
+
+            <p>Password</p>
+            <input type="password" name="upswd1" placeholder="Enter Password" required="">
+
+            <p>Retype Password</p>
+            <input type="password" name="upswd2" placeholder="Re-Enter Password" required="">
+
+            <input type="submit" name="" value="Register">
+
+            <br><br>
+            <a href="loginform.html">Already have an acoount? Login</a>
+        </form>
+        
+    </div>
+</header>
+</body>
+
+</html>
